@@ -61,6 +61,7 @@ namespace DualPageApp
             string currentVersion = Application.ProductVersion; // z.B. "1.0.0"
             string repoOwner = "Jensrisc";
             string repoName = "CBM-Tool";
+            string token = "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";
 
             using HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.UserAgent.ParseAdd("CBMImportToolUpdater");
