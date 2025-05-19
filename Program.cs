@@ -65,6 +65,7 @@ namespace DualPageApp
 
             using HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.UserAgent.ParseAdd("CBMImportToolUpdater");
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("token", token);
 
             string apiUrl = $"https://api.github.com/repos/{repoOwner}/{repoName}/releases/latest";
             var response = await client.GetAsync(apiUrl);
